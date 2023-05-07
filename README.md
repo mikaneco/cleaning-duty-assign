@@ -4,16 +4,16 @@ This program retrieves a list of members using the Google Sheets API and assigns
 ## Required Environment Variables
 Define the following environment variables in a .env file:
 
-`SHEET_ID`: The sheet ID of the Google Sheets.
-`API_KEY`: The API key for accessing the Google Sheets API.
-`SHEET_NAME`: The name of the sheet containing the member list.
+- `SHEET_ID`: The sheet ID of the Google Sheets.
+- `API_KEY`: The API key for accessing the Google Sheets API.
+- `SHEET_NAME`: The name of the sheet containing the member list.
 
 In the Google Spreadsheet, please define the id in column A and the name in column B. The program will fetch this information to assign cleaning duties on a weekly basis. Make sure to follow this format for the program to work correctly.
-|  id  |  name  |
-| ---- | ---- |
-|  1  |  John  |
-|  2  |  Alex  |
-|  3  |  Chris  |
+|id|name|
+|----|----|
+|1|John|
+|2|Alex|
+|3|Chris|
 
 ## Usage
 1. Install the Go programming language.
