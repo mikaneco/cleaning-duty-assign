@@ -43,10 +43,10 @@ func main() {
 		return
 	}
 
-	// 現在の週を取得
+	// Get current week
 	_, currentWeek := time.Now().ISOWeek()
 
-	// メンバーの週替わりの掃除当番を出力
+	// Print cleaning duty
 	printCleaningDuty(members, currentWeek)
 
 }
@@ -96,18 +96,18 @@ func convertToMembers(values [][]string) []Member {
 
 func printCleaningDuty(members []Member, currentWeek int) {
 	numMembers := len(members)
-	fmt.Println("週替わりの掃除当番:")
+	fmt.Println("Weekly duties:")
 	for i, member := range members {
 		fmt.Printf("Week %d: %s\n", i+1, member.Name)
 	}
 
-	// 現在の週の当番
-	fmt.Println("\nこの週の当番:")
+	// This week duty
+	fmt.Println("\nThis week duty:")
 	currentWeekDuty := members[(currentWeek-1)%numMembers]
 	fmt.Printf("Week %d: %s\n", currentWeek, currentWeekDuty.Name)
 
-	// 次の週の当番
-	fmt.Println("\n次の週の当番:")
+	// Next week duty
+	fmt.Println("\nNext week duty:")
 	nextWeekDuty := members[currentWeek%numMembers]
 	fmt.Printf("Week %d: %s\n", currentWeek+1, nextWeekDuty.Name)
 }
